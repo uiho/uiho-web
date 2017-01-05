@@ -9,14 +9,12 @@ body {
   margin: 0;
   background: #000;
   padding:0px;
-  color:#727272;
+  color:#ffffff;
   font-weight:400;
   font-family: 'Raleway', sans-serif;
 }
-header {
-  width: auto;
-  height: auto;
-  background: rgba(0,255,255,0.25);
+footer{
+    display: block;
 }
 video {
   position: fixed;
@@ -42,17 +40,52 @@ h1 {
   letter-spacing: .3rem;
 }
 
-#content {
+.content {
+  display: block;
   font-weight:100;
   background: rgba(0,0,0,0.3);
   color: white;
-  padding: 2rem;
-  width: 35%;
-  margin:2rem;
-  float: right;
+  padding: 1rem;
+  width: 30%;
+  margin:0.1rem;
+  float: left;
   font-size: 1.2rem;
 }
+.oPageCentered {
+    margin: 0 auto;
+    position: relative;
+    width: 960px;
+}
+.oHeader {
+    background: #fff;
+    padding-top: 0;
+    height: 4rem;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.oFooter {
+    position: relative;
+    width: 100%;
+    margin-top: 80px;
+    padding: 80px 0 100px;
+    background: #494949;
+}
+.oFooterText {
+}
+.oLogo{
+  width: 4rem;
+  height: 4rem;
+}
+.oLogo img {
+   height: 100%;
+   width: 100%;
+}
 
+#main{
+  ackground: #fff;
+  overflow: auto;
+  min-height: 400px;
+}
 #video-btn {
   width:10%;
   margin:0;
@@ -81,22 +114,21 @@ a {
   display: inline-block;
   color: #fff;
   text-decoration: none;
-  background:rgba(0,0,0,0.5);
-  padding: .5rem;
+  padding: 0;
   transition: .6s background;
 }
 a:hover{
-  background:rgba(0,0,0,0.9);
+  background:rgba(0,0,0,0);
 }
 @media print, screen and (max-device-width: 720px) {
-  #content {
+  .content {
     width: 60%;
   }
 }
 
 @media print, screen and (max-device-width: 480px) {
   html { background: url(https://image.uihochoi.com/penny-at-night.jpg) #000 no-repeat center center fixed; }
-  #content {
+  .content {
     width: 75%;
   }
 }
@@ -106,27 +138,47 @@ a:hover{
 </style>
 </head>
 <body>
-<header>
-  <div id="video-btn">
-  <button><img src="image/pause-32.png"></button>
+<video poster="https://image.uihochoi.com/penny-at-night.jpg" id="bgvid" playsinline autoplay muted loop>
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+  <source src="https://video.uihochoi.com/penny-at-night.webm" type="video/webm">
+  <source src="https://video.uihochoi.com/penny-at-night.mp4" type="video/mp4">
+</video>
+<header role=banner class="oHeader">
+  <div class=oPageCentered>
+    <div class="oLogo">
+      <a href="/" alt="logo"> <img src="image/logo.png" ></a>
+    </div>
   </div>
 </header>
 
-<video poster="https://image.uihochoi.com/penny-at-night.jpg" id="bgvid" playsinline autoplay muted loop>
-  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
-<source src="https://video.uihochoi.com/penny-at-night.webm" type="video/webm">
-<source src="https://video.uihochoi.com/penny-at-night.mp4" type="video/mp4">
-</video>
-
-<div id="content">
-<h1>UIHO CHOI</h1>
-<p>filmed by Uiho Choi 2016
-<p>The last trip of 2016 with a penny board.</p>
-<p>uiho@uihochoi.com</p>
+<div id="main" role=main class="oPageCentered">
+  <div class="content">
+    <h1>UIHO CHOI</h1>
+    <p>The last trip of 2016 with my penny board. It waw raining, windy and freezing, however those weren't able to stop me crusing.</p>
+    <p>uiho@uihochoi.com</p>
+  </div>
+  <div class="content">
+    <h1>UIHO CHOI</h1>
+    <p>The last trip of 2016 with my penny board. he last trip of 2016 with my penny board. he last trip of 2016 with my penny board. he last trip of 2016 with my penny board. It waw raining, windy and freezing, however those weren't able to stop me crusing.</p>
+    <p>uiho@uihochoi.com</p>
+  </div>
+  <div class="content">
+    <h1>UIHO CHOI</h1>
+    <p>The last trip of 2016 with my penny board. It waw raining, windy and freezing, however those weren't able to stop me crusing.</p>
+    <p>uiho@uihochoi.com</p>
+  </div>
+  <div class="content">
+    <h1>UIHO CHOI</h1>
+    <p>The last trip of 2016 with my penny board. It waw raining, windy and freezing, however those weren't able to stop me crusing.</p>
+    <p>uiho@uihochoi.com</p>
+  </div>
 </div>
 
-
-
+<footer role="contentinfo" class="oFooter">
+    <div class="oPageCentered">
+        <div class="oFooterText">2016 - 2017 Uiho Choi.</div>
+    </div>
+</footer>
 </body>
 
 <script>
