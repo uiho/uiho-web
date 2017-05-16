@@ -1,14 +1,27 @@
-<pre id="json"></pre>
-
+<!doctype html>
+<html>
+<head>
+<title>Uiho Choi</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta charset="utf-8">
+<meta property="og:title" content="Uiho Choi" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.uihochoi.com" />
+<meta property="og:image" content="https://s3-us-west-2.amazonaws.com/uiho-web/image/uiho_jiri_02.jpg">
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:description" content="“Stay Hungry. Stay Foolish.” - Steve Jobs" />
+<meta prefix="fb: http://ogp.me/ns/fb#" property="fb:app_id" content="232580437197451">
+<script type="text/javascript" src="json/data.json"></script>
 <script>
-var data = {
-  "name" : "Uiho Choi",
-  "title" : "Software Engineer",
-  "email" : "uiho@uihochoi.com",
-  "github" : "https://github.com/uiho",
-  "url" : "https://www.uihochoi.com"
+function load() {
+	var loadedData = JSON.parse(data);
+
+  document.getElementById("json").innerHTML = JSON.stringify(loadedData, undefined, 2);
 }
-
-
-document.getElementById("json").innerHTML = JSON.stringify(data, undefined, 2);
 </script>
+</head>
+<body onload="load()">
+<pre id="json"></pre>
+</body>
+</html>
