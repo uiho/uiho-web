@@ -1,21 +1,14 @@
-<html>
-<head></head>
-<body>
-<pre>
-{
-  "status" : 200,
+<pre id="json"></pre>
+
+<script>
+var data = {
   "name" : "Uiho Choi",
+  "title" : "Software Engineer",
   "email" : "uiho@uihochoi.com",
-  "github_profile" : "https://github.com/uiho",
-  "current_project_name" : "uiho-web",
-  "current_project_repo" : "https://github.com/uiho/uiho-web",
-  "current_project_page_list" : [
-    "https://uihochoi.com"
-    "https://uihochoi.com/video.html"
-    "https://uihochoi.com/blog/java.html"
-  ]
-  "tag" : ["uiho-web", "github", "aws-s3-static-web", "uiho"]
+  "github" : "https://github.com/uiho",
+  "url" : "https://www.uihochoi.com"
 }
-</pre>
-</body>
-</html>
+
+
+document.getElementById("json").innerHTML = JSON.stringify(data, undefined, 2);
+</script>
